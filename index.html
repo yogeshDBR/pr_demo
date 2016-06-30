@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Product Recommendation Demo layout</title>
+
+    <meta name="description" content="Sears Product Recommendation">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/jquery.dataTables.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row cus-header">
+		<div class="col-md-2 no-pad-top">
+			<a href="index.html" class="logo"> <img src="img/logo.png" /> </a> 
+		</div>
+		<div class="col-md-10">
+			<nav class="navbar navbar-default cus-navbar" role="navigation">
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Application <strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#"> MG Offer</a>
+								</li>
+								<li>
+									<a href="#"> POS Offer </a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> PM <strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#"> Simple API Landing Page </a>
+								</li>
+								<li>
+									<a href="#"> Data Loader Status </a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Carousel <strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#"> Sears PVT Test </a>
+								</li>
+								<li>
+									<a href="#"> Sears PVT Test-2</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Item Matching <strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#"> Best Match Rules </a>
+								</li>
+								<li>
+									<a href="#"> Comparision Rules </a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>	
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<ul class="breadcrumb cus-breadcrumb">
+				<li>
+					<a href="#">FBT Test  </a>
+				</li>
+				<li>
+					<a href="#"> Merchant </a>
+				</li>
+				<li class="active">
+					Index
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<h5 class="recommondation-title">
+				New Sears.Com Carousel - Frequently Bought Together
+			</h5>
+		</div>
+		<div class="clear cleafix"> </div>
+		<div class="col-md-12 head-rule">
+			<div class="col-md-3" style="padding:0px;">
+				<div class="col-md-5 cus-title">
+					<span class="label cus-label"> Master Product ID : </span>
+				</div>
+				<div class="col-md-7">
+					<input class="form-control cus-input" placeholder="Product ID" />
+				</div>
+			</div>
+			<div class="col-md-4" style="padding:0px;">
+				<div class="col-md-5 cus-title">
+					<span class="label cus-label"> Recommandation Provider : </span>
+				</div>
+				<div class="col-md-6">
+					<select class="form-control">
+						<option value=""></option>
+						<option value="tec" selected="selected">TEC</option>
+						<option value="rr">RR</option>
+						<option value="crossshop">CROSSSHOP</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-3" style="padding:0px;">
+				<div class="col-md-12" style="padding:0px;" >
+					<input type="checkbox" />
+					<span class="label cus-label"> Don't Update Carousel Cache </span> 
+				</div>
+			</div>
+			<div class="col-md-2">
+				<button class="btn btn-default btn-primary"> Go </button>
+			</div>
+		</div>	
+	</div>
+	<div class="row">
+		<div class="col-md-12 pr-table">
+			<table id="productRecommandation" class="table table-bordered table-stripe cus-dataTable" width="100%">
+				<thead>
+					<tr>
+						<th> Image </th>
+						<th>Master Product ID</th>
+						<th>Name</th>
+						<th>Regular Price</th>
+						<th>Selling Price</th>
+					</tr>
+				</thead>
+			<!-- 	<tbody>
+					<tr>
+						<td> <img src="img/products/1.jpg" class="img-responsive" width="120px" /> </td>
+						<td> 00640248000P </td>
+						<td> Scenic U.S. American Flag Mailbox </td>
+						<td> 38.0 </td>
+						<td> 36.100000000000001 </td>
+					</tr>
+					<tr>
+						<td> <img src="img/products/2.jpg" class="img-responsive" width="120px" /> </td>
+						<td> 043W005432685001P </td>
+						<td> 1/2 x 4' Natural Bamboo Pole </td>
+						<td> 21.989999999999998 </td>
+						<td> 1.29 </td>
+					</tr>
+					<tr>
+						<td> <img src="img/products/3.jpg" class="img-responsive" width="120px" /> </td>
+						<td> 07113119000P </td>
+						<td> Rico Seattle Seahawks Deluxe Grill Cover </td>
+						<td> 49.990000000000002 </td>
+						<td> 35.990000000000002 </td>
+					</tr>
+					<tr>
+						<td> <img src="img/products/4.jpg" class="img-responsive" width="120px" /> </td>
+						<td> 07113895000P </td>
+						<td> Minnesota Vikings Deluxe Grill Cover </td>
+						<td> 39.990000000000002 </td>
+						<td> 35.780000000000001 </td>
+					</tr>
+				</tbody> -->
+			</table>
+		</div>
+	</div>
+</div>
+
+    <script src="js/jquery.min.js"></script>
+	<script src="js/jquery.dataTables.js"> </script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/Globalvar.js"></script>
+    <script src="js/scripts.js"></script>
+	<script src="scripts/productRecommandations.js"> </script>
+  </body>
+</html>
